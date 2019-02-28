@@ -12,14 +12,18 @@ const MissionCard = props => {
       p={3}
     >
       <Heading fontSize={2}>
-        <a href={props.link} target="_blank" rel="noopener noreferrer">
-          {props.title}
-        </a>
+        {props.link ? (
+          <a href={props.link} target="_blank" rel="noopener noreferrer">
+            {props.title}
+          </a>
+        ) : (
+          props.title
+        )}
       </Heading>
       <Text fontSize={1} color="grey.7">
         🌎{props.site}
       </Text>
-      <YouTube url={props.video} />
+      {props.video && <YouTube url={props.video} />}
       <Flex>
         <Box flex={1}>
           <Text fontSize={1} color="grey.9">

@@ -5,11 +5,11 @@ import theme from '../theme';
 import Layout from './Layout';
 import GlobalStyle from './lib/GlobalStyle';
 import Spinner from './lib/Spinner';
-import MissionList from './MissionList';
+import MissionsOverview from './MissionsOverview';
 
-const SuspenseMissionList = () => (
+const SuspenseMissionsOverview = () => (
   <Suspense maxDuration={2000} fallback={<Spinner full />}>
-    <MissionList />
+    <MissionsOverview />
   </Suspense>
 );
 
@@ -20,7 +20,7 @@ const App = () => {
         <GlobalStyle />
         <Layout>
           <Router>
-            <SuspenseMissionList path="/" />
+            <SuspenseMissionsOverview path="/" />
           </Router>
         </Layout>
       </>
