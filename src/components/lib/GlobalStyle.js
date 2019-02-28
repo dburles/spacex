@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: sans-serif;
     line-height: 1.5;
-    background: ${props => props.theme.colors.grey[8]};
+    background: ${props => props.theme.colors.grey[9]};
   }
   a {
     color: ${props => props.theme.colors.grey[9]};
